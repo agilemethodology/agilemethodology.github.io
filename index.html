@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>
+<script>
   window.chatBotConfig = {agentId: 285}
 </script>
 <script
@@ -110,6 +110,25 @@
             animation: rotate 2s linear infinite;
         }
 
+        .adaptive-plan {
+            border: 3px solid var(--primary-color);
+            border-radius: 50%;
+            position: relative;
+            animation: rotate 2s linear infinite;
+        }
+
+        .adaptive-plan::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            width: 20px;
+            height: 20px;
+            border-top: 3px solid var(--primary-color);
+            border-right: 3px solid var(--primary-color);
+        }
+
         .scrum-team {
             display: flex;
             justify-content: center;
@@ -216,7 +235,7 @@
                     <p class="text-gray-600">Foster strong team communication and cross-functional collaboration</p>
                 </div>
                 <div class="card">
-                    <div class="agile-icon"></div>
+                    <div class="agile-icon adaptive-plan"></div>
                     <h3 class="text-xl font-semibold mb-4">Adaptive Planning</h3>
                     <p class="text-gray-600">Embrace change and adapt to evolving project requirements</p>
                 </div>
@@ -359,4 +378,5 @@
             });
         });
     </script>
-</body
+</body>
+</html>
