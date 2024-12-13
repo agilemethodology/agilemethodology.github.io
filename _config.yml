@@ -1,3 +1,6 @@
-title: Agile Methodology Guide
-description: A blog to explore Agile practices, principles, and tools.
-theme: minima
+title: "Agile Methodology Guide"
+description: "Your go-to guide for Agile methodologies, principles, and practices."
+url: "https://agilemethodology.github.io"
+baseurl: "" # leave as empty for root-level site
+theme: jekyll-theme-minimal
+markdown: kramdown
