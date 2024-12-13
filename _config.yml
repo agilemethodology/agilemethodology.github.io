@@ -1,6 +1,5 @@
-title: "Agile Methodology Guide"
-description: "Your go-to guide for Agile methodologies, principles, and practices."
-url: "https://agilemethodology.github.io"
-baseurl: "" # leave as empty for root-level site
-theme: jekyll-theme-minimal
-markdown: kramdown
+title: Agile Methodology Blog
+description: Insights and resources on Agile practices
+theme: minima
+plugins:
+  - jekyll-feed
