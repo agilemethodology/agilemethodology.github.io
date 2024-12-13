@@ -1,22 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+  window.chatBotConfig = {agentId: 285}
+</script>
+<script
+  defer
+  id="chatbot-widget-script"
+  src="https://app.swiftsupport.ai/ChatbotScripts/chatbotBubble.js">
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agile Methodology</title>
+    <title>Agile Methodology Guide</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary-color: #4F46E5;
+            --secondary-color: #7C3AED;
+            --bg-gradient: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+            --text-gradient: linear-gradient(90deg, #4F46E5 0%, #7C3AED 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Navigation Styles */
+        .nav-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--bg-gradient);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Section Styles */
+        .section {
+            min-height: 100vh;
+            padding: 80px 20px;
+            display: none;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        /* Card Styles */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* CSS Icons */
+        .agile-icon {
+            width: 60px;
+            height: 60px;
+            position: relative;
+            margin: 20px auto;
+        }
+
+        .sprint-cycle {
+            border: 3px solid var(--primary-color);
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: rotate 2s linear infinite;
+        }
+
+        .adaptive-plan {
+            border: 3px solid var(--primary-color);
+            border-radius: 50%;
+            position: relative;
+            animation: rotate 2s linear infinite;
+        }
+
+        .adaptive-plan::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            width: 20px;
+            height: 20px;
+            border-top: 3px solid var(--primary-color);
+            border-right: 3px solid var(--primary-color);
+        }
+
+        .scrum-team {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .scrum-team::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            position: absolute;
+            animation: pulse 2s ease infinite;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.5; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 10px;
+            }
+
+            .section {
+                padding: 60px 15px;
+            }
+
+            .card {
+                margin: 10px 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Agile Methodology Blog</h1>
-        <nav>
-            <a href="/blog">Blog</a>
-        </nav>
-    </header>
-    <main>
-        <p>Explore our insights on Agile practices and methodologies.</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 Agile Methodology Blog</p>
-    </footer>
+    <!-- Navigation -->
+    <nav class="nav-container fixed top-0 left-0 w-full z-50 py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-xl font-bold bg-clip-text text-transparent" style="background-image: var(--text-gradient)">
+                    Agile Guide
+                </h1>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#principles" class="nav-link">Principles</a>
+                    <a href="#methodologies" class="nav-link">Methodologies</a>
+                    <a href="#practices" class="nav-link">Practices</a>
+                    <a href="#tools" class="nav-link">Tools</a>
+                </div>
+                <button class="md:hidden" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed top-16 left-0 w-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 md:hidden">
+        <div class="py-4 px-6 space-y-4">
+            <a href="#home" class="block nav-link">Home</a>
+            <a href="#principles" class="block nav-link">Principles</a>
+            <a href="#methodologies" class="block nav-link">Methodologies</a>
+            <a href="#practices" class="block nav-link">Practices</a>
+            <a href="#tools" class="block nav-link">Tools</a>
+        </div>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home" class="section active">
+        <div class="container mx-auto px-4 pt-20">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent" 
+                    style="background-image: var(--text-gradient)">
+                    Agile Methodology
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                    A modern approach to project management and software development
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="card">
+                    <div class="agile-icon sprint-cycle"></div>
+                    <h3 class="text-xl font-semibold mb-4">Iterative Development</h3>
+                    <p class="text-gray-600">Break down projects into small, manageable iterations for continuous delivery</p>
+                </div>
+                <div class="card">
+                    <div class="agile-icon scrum-team"></div>
+                    <h3 class="text-xl font-semibold mb-4">Team Collaboration</h3>
+                    <p class="text-gray-600">Foster strong team communication and cross-functional collaboration</p>
+                </div>
+                <div class="card">
+                    <div class="agile-icon adaptive-plan"></div>
+                    <h3 class="text-xl font-semibold mb-4">Adaptive Planning</h3>
+                    <p class="text-gray-600">Embrace change and adapt to evolving project requirements</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="home" class="section active">
+    <div class="container mx-auto px-4 pt-20">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent" 
+                style="background-image: var(--text-gradient)">
+                Agile Methodology Blog
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                Latest insights and updates on Agile Methodology.
+            </p>
+        </div>
+        
+        <!-- Jekyll Blog Post Loop -->
+---
+layout: default
+---
+
+<div class="blog-container">
+  {% for post in site.posts %}
+  <article class="blog-card">
+    <img src="{{ post.image }}" alt="{{ post.title }}" class="blog-image">
+    <div class="blog-content">
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <p>{{ post.excerpt | strip_html }}</p>
+      <a href="{{ post.url }}" class="read-more">Read More</a>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+
+
+
+    <!-- Principles Section -->
+    <section id="principles" class="section">
+        <div class="container mx-auto px-4 pt-20">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Agile Principles</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-4">Customer Satisfaction</h3>
+                    <p class="text-gray-600">Early and continuous delivery of valuable software</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-4">Welcome Change</h3>
+                    <p class="text-gray-600">Embrace changing requirements, even late in development</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-4">Frequent Delivery</h3>
+                    <p class="text-gray-600">Deliver working software frequently</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-4">Daily Collaboration</h3>
+                    <p class="text-gray-600">Business people and developers must work together daily</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodologies Section -->
+    <section id="methodologies" class="section">
+        <div class="container mx-auto px-4 pt-20">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Agile Methodologies</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-4">Scrum</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Sprint-based development</li>
+                        <li>Daily stand-ups</li>
+                        <li>Sprint planning and review</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-4">Kanban</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Continuous flow</li>
+                        <li>Work in progress limits</li>
+                        <li>Pull system</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practices Section -->
+    <section id="practices" class="section">
+        <div class="container mx-auto px-4 pt-20">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Agile Practices</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-4">User Stories</h3>
+                    <p class="text-gray-600">Define requirements from the user's perspective</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-4">Pair Programming</h3>
+                    <p class="text-gray-600">Two developers working together on the same code</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-4">Continuous Integration</h3>
+                    <p class="text-gray-600">Regularly integrate code changes into a shared repository</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="section">
+        <div class="container mx-auto px-4 pt-20">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Agile Tools</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-4">Jira</h3>
+                    <p class="text-gray-600">Project tracking and management</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-4">Trello</h3>
+                    <p class="text-gray-600">Visual task management</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-4">Slack</h3>
+                    <p class="text-gray-600">Team communication</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-4">GitHub</h3>
+                    <p class="text-gray-600">Code repository and version control</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('-translate-x-full');
+        }
+
+        // Section navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all sections and navigation links
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // Handle navigation clicks
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1);
+                    
+                    // Hide all sections and show target section
+                    sections.forEach(section => {
+                        section.classList.remove('active');
+                        if (section.id === targetId) {
+                            section.classList.add('active');
+                        }
+                    });
+
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobileMenu');
+                    mobileMenu.classList.add('-translate-x-full');
+
+                    // Smooth scroll to section
+                    document.getElementById(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
