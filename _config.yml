@@ -1,5 +1,53 @@
-title: Agile Methodology Blog
-description: Insights and resources on Agile practices
-theme: minima
+# Site Settings
+title: Brilworks Tech Blog
+description: Insights on Technology, Agile, and Software Development
+url: "https://brilworks.github.io"
+baseurl: ""
+
+# Build Settings
+markdown: kramdown
+permalink: /:title/
+
+# Plugins
 plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
   - jekyll-feed
+
+# Sass Compression
+sass:
+  style: compressed
+
+# SEO Configuration
+author:
+  name: Brilworks Team
+  email: tech@brilworks.com
+
+# Social Media Links
+social:
+  github: brilworks
+  linkedin: brilworks
+
+# Default Page Settings
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+
+# Performance Optimization
+timezone: Asia/Kolkata
+encoding: UTF-8
+
+# Reading Experience
+future: true
+highlighter: rouge
+
+# Exclude Files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
