@@ -7,17 +7,17 @@
 </head>
 <body>
     <header>
-        <h1>{{ site.title }}</h1>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/blog">Blog</a>
-        </nav>
+        <h1><a href="/">{{ site.title }}</a></h1>
     </header>
     <main>
-        {{ content }}
+        <article>
+            <h1>{{ page.title }}</h1>
+            <p><em>{{ page.date | date: "%B %d, %Y" }}</em></p>
+            {{ content }}
+        </article>
     </main>
     <footer>
-        <p>&copy; 2024 Blogs {{ site.title }}</p>
+        <p>&copy; 2024 {{ site.title }}</p>
     </footer>
 </body>
 </html>
