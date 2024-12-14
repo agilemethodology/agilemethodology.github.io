@@ -13,7 +13,7 @@ Kanban is a visual approach to managing work, focusing on continuous delivery an
 ## Core Kanban Principles
 - Visualize workflow
 - Limit work in progress
-- Manage flow
+- Manage flows
 - Make process policies explicit
 - Implement feedback loops
 
