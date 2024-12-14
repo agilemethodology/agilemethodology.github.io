@@ -6,7 +6,7 @@ baseurl: ""
 
 # Build Settings
 markdown: kramdown
-permalink: /blogs/:title/
+permalink: /blog/:title/
 
 # Plugins
 plugins:
