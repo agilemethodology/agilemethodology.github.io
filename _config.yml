@@ -1,24 +1,53 @@
-title: Agile Insights
-description: Transform your team's productivity with proven Agile and Scrum strategies
+# Site Settings
+title: Agile Methodology Tech Blog
+description: Insights on Technology, Agile, and Software Development
 url: "https://agilemethodology.github.io"
 baseurl: ""
 
-# Build settings
+# Build Settings
 markdown: kramdown
-theme: minima
+permalink: /:title/
+
+# Plugins
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
 
-# Blog post configuration
-permalink: /blog/:year/:month/:day/:title/
+# Sass Compression
+sass:
+  style: compressed
 
-# Exclude from processing
+# SEO Configuration
+author:
+  name: Agile Team
+  email: dhaval2123mba@gmail.com
+
+# Social Media Links
+social:
+  github: brilworks
+  linkedin: brilworks
+
+# Default Page Settings
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+
+# Performance Optimization
+timezone: Asia/Kolkata
+encoding: UTF-8
+
+# Reading Experience
+future: true
+highlighter: rouge
+
+# Exclude Files
 exclude:
   - Gemfile
   - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - README.md
+  - LICENSE
