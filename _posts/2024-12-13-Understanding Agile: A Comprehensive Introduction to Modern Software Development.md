@@ -5,6 +5,7 @@ date: 2024-12-13
 description: "Explore Agile methodology, its core principles, key frameworks like Scrum and Kanban, and how it transforms software development practices."
 keywords: "Agile methodology, software development, Scrum, Kanban, project management, iterative development"
 author: "Agile Methodology Blog"
+image: "/assets/images/Understanding-Agile.svg"
 tags: [agile, software development, project management]
 ---
 
