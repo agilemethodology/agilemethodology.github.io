@@ -2,6 +2,7 @@
 layout: post
 title: "Scrum vs. Kanban: Which Method is Right for You?"
 date: 2024-12-15
+image: "/assets/images/scrum-vs-kanban.svg"
 ---
 
 When choosing an Agile framework, Scrum and Kanban are two of the most widely adopted methodologies. But how do you decide which one is the best fit for your team? Let's break down the differences:
