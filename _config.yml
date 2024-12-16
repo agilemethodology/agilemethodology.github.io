@@ -1,6 +1,6 @@
 # Site Settings
-title: Agile Methodology Tech Blog
-description: Insights on Technology, Agile, and Software Development
+title: "Agile Methodology Tech Blog"
+description: "Explore the best insights on Agile, Technology, and Software Development practices. Learn how to adopt Agile for organizational success."
 url: "https://agilemethodology.github.io"
 baseurl: ""
 
@@ -10,9 +10,12 @@ permalink: /blog/:title/
 
 # Plugins
 plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
+  - jekyll-seo-tag # Adds metadata for better search engine indexing
+  - jekyll-sitemap # Generates a sitemap.xml for search engines
+  - jekyll-feed # Adds RSS feed for subscribers
+  - jekyll-analytics # Enables Google Analytics tracking
+  - jekyll-paginate # Enables pagination for blog posts
+  - jekyll-archives # Creates archive pages by categories or tags
 
 # Sass Compression
 sass:
@@ -20,13 +23,24 @@ sass:
 
 # SEO Configuration
 author:
-  name: Agile Team
-  email: dhaval2123mba@gmail.com
+  name: "Agile Team"
+  email: "dhaval2123mba@gmail.com"
+  twitter: "brilworks_agile"
+  linkedin: "brilworks"
+  facebook: "brilworksAgile"
+  instagram: "brilworksAgile"
+  bio: "A dedicated team sharing Agile methodologies and software development insights to empower tech enthusiasts and professionals."
+  location: "Ahmedabad, India"
 
 # Social Media Links
-social:
-  github: brilworks
-  linkedin: brilworks
+social_links:
+  medium: "https://medium.com/@dhaval.info"
+  linkedin: "https://www.linkedin.com/in/dhavalmakwana-/"
+  github: "https://github.com/agilemethodology"
+  instagram: "https://www.instagram.com/dhaval.info"
+
+# Google Analytics
+google_analytics: G-JZ3F961KTZ 
 
 # Default Page Settings
 defaults:
@@ -36,14 +50,17 @@ defaults:
     values:
       layout: "post"
       comments: true
+      share: true # Add social sharing buttons on posts
 
 # Performance Optimization
 timezone: Asia/Kolkata
 encoding: UTF-8
+paginate: 5 # Number of posts per page for better navigation
 
 # Reading Experience
 future: true
 highlighter: rouge
+paginate_path: "/page:num/"
 
 # Exclude Files
 exclude:
@@ -51,3 +68,28 @@ exclude:
   - Gemfile.lock
   - README.md
   - LICENSE
+  - node_modules
+  - vendor
+
+# Additional Metadata for SEO
+meta_description: "Learn Agile principles, best practices, and technology trends with Agile Methodology Tech Blog. Gain insights to advance your career."
+meta_keywords: "Agile methodology, project management, software development, agile transformation, technology insights"
+
+# Sitemap Settings
+sitemap:
+  changefreq: "weekly"
+  priority: "1.0"
+
+# Disqus Integration for Comments
+disqus:
+  shortname: agile-tech-blog
+
+# Robots.txt
+robots:
+  disallow: 
+    - /drafts/
+allow: "/"
+
+# Advanced Caching (optional)
+jekyll_assets:
+  compress: true
