@@ -1,10 +1,21 @@
 ---
-title: Agile Insights: Beyond Software - Fueling Innovation Across Industries
+title: "Agile Insights: Beyond Software - Fueling Innovation Across Industries"
 date: 2024-12-16 # Update with the current date
 image: "/assets/images/agile-innovation.svg"
-categories: [Agile, Innovation, Business , SDLC ] # Add relevant categories
-tags: [Agile, Agile Methodology, Innovation, Business Agility, Cross-Industry, Digital Transformation] # Add relevant tags
+categories:
+  - Agile
+  - Innovation
+  - Business
+  - SDLC
+tags:
+  - Agile
+  - Agile Methodology
+  - Innovation
+  - Business Agility
+  - Cross-Industry
+  - Digital Transformation
 ---
+
 
 This blog post, optimized for search engines, explores how Agile methodologies, once the domain of software developers, have become a powerful driver of innovation across various industries and functions.
 
