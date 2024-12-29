@@ -1,9 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | Agile Insights Blog</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>{% if page.title %}{{ page.title }} | Agile Insights Blog{% else %}Agile Insights Blog - Agile Development Best Practices{% endif %}</title>
+    <meta name="title" content="{% if page.title %}{{ page.title }} | Agile Insights Blog{% else %}Agile Insights Blog - Agile Development Best Practices{% endif %}">
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}Expert insights on Agile methodologies, Scrum practices, and software development best practices.{% endif %}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}Agile Insights Blog{% endif %}">
+    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}Expert insights on Agile methodologies, Scrum practices, and software development best practices.{% endif %}">
+    <meta property="og:image" content="{% if page.image %}{{ site.url }}{{ page.image }}{% else %}{{ site.url }}/assets/images/default-og-image.jpg{% endif %}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}Agile Insights Blog{% endif %}">
+    <meta property="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}Expert insights on Agile methodologies, Scrum practices, and software development best practices.{% endif %}">
+    <meta property="twitter:image" content="{% if page.image %}{{ site.url }}{{ page.image }}{% else %}{{ site.url }}/assets/images/default-og-image.jpg{% endif %}">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+    <!-- Article Specific Meta Tags -->
+    {% if page.layout == 'post' %}
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+    <meta property="article:author" content="{{ site.url }}/about">
+    {% for category in page.categories %}
+    <meta property="article:tag" content="{{ category }}">
+    {% endfor %}
+    {% endif %}
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        {% if page.layout == 'post' %}
+        "@type": "BlogPosting",
+        "headline": "{{ page.title }}",
+        "image": "{% if page.image %}{{ site.url }}{{ page.image }}{% else %}{{ site.url }}/assets/images/default-og-image.jpg{% endif %}",
+        "datePublished": "{{ page.date | date_to_xmlschema }}",
+        "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+        "author": {
+            "@type": "Organization",
+            "name": "Agile Insights Blog"
+        },
+        {% else %}
+        "@type": "WebSite",
+        "name": "Agile Insights Blog",
+        {% endif %}
+        "description": "{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}Expert insights on Agile methodologies, Scrum practices, and software development best practices.{% endif %}",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Agile Insights Blog",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "{{ site.url }}/assets/logo.svg"
+            }
+        }
+    }
+    </script>
     
     <!-- Critical CSS -->
     <style>
@@ -197,5 +256,15 @@
             e.target.reset();
         });
     </script>
+    <!-- Preload Critical Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" as="style">
+    <link rel="preload" href="/assets/logo.svg" as="image">
+    
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Feed -->
+    <link rel="alternate" type="application/rss+xml" title="Agile Insights Blog RSS Feed" href="{{ site.url }}/feed.xml">
+    
 </body>
 </html>
