@@ -9,9 +9,6 @@ image: /assets/images/ai-pm-2025.jpg
 description: "Discover how artificial intelligence is transforming product management in 2025. Learn about AI-powered customer insights, automated prioritization, and the future of product decision-making."
 ---
 
-<p align="center">
-  <img src="/assets/images/ai-pm-2025.jpg" alt="AI in Product Management" style="max-width: 800px; width: 100%; height: auto;">
-</p>
 
 <div style="text-align: justify; margin-bottom: 30px;">
 In the dynamic landscape of technology and innovation, Artificial Intelligence has emerged as a transformative force in Product Management. As we navigate through 2025, the integration of AI tools and methodologies has fundamentally reshaped how products are conceived, developed, and brought to market. This comprehensive guide explores the revolutionary impact of AI on Product Management and what it means for modern product leaders.
@@ -58,6 +55,10 @@ Machine learning models analyze historical user data to predict:
 - Potential pain points
 - Customer lifetime value predictions
 </div>
+
+<p align="center">
+  <img src="/assets/images/Product-testing.svg" alt="AI in Product Management" style="max-width: 800px; width: 100%; height: auto;">
+</p>
 
 ### Automated Feedback Clustering
 
