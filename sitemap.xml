@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
     <!-- Homepage -->
     <url>
         <loc>https://agilemethodology.github.io/</loc>
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <lastmod>2025-01-06T00:00:00+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
@@ -12,101 +11,88 @@
     <!-- Blog Index -->
     <url>
         <loc>https://agilemethodology.github.io/blog/</loc>
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <lastmod>2025-01-06T00:00:00+00:00</lastmod>
         <changefreq>daily</changefreq>
-        <priority>0.8</priority>
+        <priority>0.9</priority>
     </url>
 
     <!-- Blog Posts -->
     <url>
         <loc>https://agilemethodology.github.io/blog/ai-revolutionizing-product-management/</loc>
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2025-01-06T00:00:00+00:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://agilemethodology.github.io/blog/A-New-Years-Message-Navigating-the-SaaS-AI-Landscape-in-2025/</loc>
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2025-01-06T00:00:00+00:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://agilemethodology.github.io/blog/saas-predictions-2025/</loc>
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2025-01-06T00:00:00+00:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://agilemethodology.github.io/blog/why-product-managers-need-ai-to-succeed/</loc>
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2025-01-06T00:00:00+00:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://agilemethodology.github.io/blog/scrum-vs-kanban/</loc>
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2025-01-06T00:00:00+00:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://agilemethodology.github.io/blog/Agile-Insights-Beyond-Software-Fueling-Innovation-Across-Industries/</loc>
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2025-01-06T00:00:00+00:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://agilemethodology.github.io/blog/agile-principles-in-practice/</loc>
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2025-01-06T00:00:00+00:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://agilemethodology.github.io/blog/scrum-master/</loc>
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2025-01-06T00:00:00+00:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://agilemethodology.github.io/blog/kanban-workflow/</loc>
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2025-01-06T00:00:00+00:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://agilemethodology.github.io/blog/first-post/</loc>
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2025-01-06T00:00:00+00:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://agilemethodology.github.io/blog/enterprise-agile/</loc>
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2025-01-06T00:00:00+00:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://agilemethodology.github.io/blog/Understanding-Agile-A-Comprehensive-Introduction-to-Modern-Software-Development/</loc>
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2025-01-06T00:00:00+00:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
         <loc>https://agilemethodology.github.io/blog/Welcome-to-Agile-Blog-A-Comprehensive-Guide-to-Agile-Methodologies/</loc>
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2025-01-06T00:00:00+00:00</lastmod>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
-
 </urlset>
