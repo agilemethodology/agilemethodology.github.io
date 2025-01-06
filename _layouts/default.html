@@ -106,6 +106,8 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
     </style>
+    <script async data-uid="9601c3c2c4" src="https://agilemethodology.kit.com/9601c3c2c4/index.js"></script>
+
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -197,12 +199,15 @@
             <p class="text-xl mb-8 max-w-2xl mx-auto">
                 Subscribe to our newsletter for the latest Agile methodologies and best practices.
             </p>
-            <form class="max-w-md mx-auto flex">
+            <!-- Kit.com-specific form -->
+            <form class="max-w-md mx-auto flex" data-form="newsletter">
                 <input 
                     type="email" 
-                    placeholder="Enter your email" 
+                    placeholder="Enter your email@yahoo.com" 
                     class="flex-grow px-4 py-3 text-gray-900 rounded-l-full"
                     required
+                    name="email"
+                    id="email"
                 >
                 <button 
                     type="submit" 
@@ -213,7 +218,7 @@
             </form>
         </div>
     </section>
-
+    
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4 grid md:grid-cols-3 gap-8">
