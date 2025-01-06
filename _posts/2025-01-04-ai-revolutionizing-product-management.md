@@ -5,7 +5,7 @@ date: 2025-01-04
 author: Product Manager
 categories: [Product Management, Artificial Intelligence]
 tags: [AI, Product Management, Digital Transformation, Innovation]
-image: /assets/images/ai-pm-2025.jpg
+image: /assets/images/ai-pm-2025.svg
 description: "Discover how artificial intelligence is transforming product management in 2025. Learn about AI-powered customer insights, automated prioritization, and the future of product decision-making."
 ---
 
@@ -81,6 +81,9 @@ AI has revolutionized how product teams prioritize features through sophisticate
 - Market impact predictions
 - Technical feasibility assessment
 </div>
+<p align="center">
+  <img src="/assets/images/pr-analysis.svg" alt="AI in Product Management" style="max-width: 800px; width: 100%; height: auto;">
+</p>
 
 ### Risk Assessment Automation
 
@@ -100,6 +103,9 @@ AI algorithms evaluate potential risks by analyzing:
 <div style="text-align: justify; margin-bottom: 25px;">
 Looking ahead, several trends will shape the future of AI in Product Management:
 </div>
+<p align="center">
+  <img src="/assets/images/auto-process.svg" alt="AI in Product Management" style="max-width: 800px; width: 100%; height: auto;">
+</p>
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 30px 0;">
   <div style="padding: 20px; background-color: #f8f9fa; border-radius: 8px;">
@@ -119,6 +125,9 @@ Looking ahead, several trends will shape the future of AI in Product Management:
     <p>AI facilitating better team coordination</p>
   </div>
 </div>
+<p align="center">
+  <img src="/assets/images/enhance-ai.svg" alt="AI in Product Management" style="max-width: 800px; width: 100%; height: auto;">
+</p>
 
 ## Conclusion
 
