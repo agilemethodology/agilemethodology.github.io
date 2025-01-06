@@ -15,10 +15,6 @@ tags:
 description: "An introduction to Agile methodologies and best practices for modern software development teams. Learn the fundamentals of Agile and how to implement them effectively."
 image: /assets/images/welcome-post-banner.jpg
 excerpt: "Discover the fundamentals of Agile methodologies and how they can transform your software development process. This comprehensive guide covers key concepts and best practices."
-toc: true
-toc_label: "Table of Contents"
-toc_icon: "cog"
-toc_sticky: true
 ---
 
 In the ever-evolving landscape of software development, organizations face unprecedented challenges in delivering high-quality products while maintaining flexibility and responding to rapid market changes. Traditional development methodologies, with their rigid structures and lengthy development cycles, often struggle to meet these modern demands. Enter Agile methodologies – a revolutionary approach that has transformed how teams conceive, develop, and deliver software products. In this comprehensive guide, we'll explore the fundamental principles of Agile, its various frameworks, and practical strategies for implementing Agile practices in your organization.
@@ -298,9 +294,3 @@ To continue your Agile journey, consider exploring:
 Remember that successful Agile adoption takes time, patience, and commitment. Start small, learn continuously, and adjust your approach based on feedback and results.
 
 ---
-
-{% include author-bio author=page.author %}
-
-{% include related-posts %}
-
-{% include comments %}
