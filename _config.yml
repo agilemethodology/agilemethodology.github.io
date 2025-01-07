@@ -51,6 +51,12 @@ defaults:
       layout: "post"
       comments: true
       share: true # Add social sharing buttons on posts
+      
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter_opts:
+    line_numbers: true
 
 # Performance Optimization
 timezone: Asia/Kolkata
@@ -77,7 +83,7 @@ meta_keywords: "Agile methodology, project management, software development, agi
 
 # Sitemap Settings
 sitemap:
-  changefreq: "weekly"
+  changefreq: "daily"
   priority: "1.0"
 
 # Disqus Integration for Comments
