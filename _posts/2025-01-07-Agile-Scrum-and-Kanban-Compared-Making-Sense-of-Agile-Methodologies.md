@@ -289,18 +289,18 @@ Choosing between Scrum and Kanban depends on various factors including team size
 </div>
 
 <p align="center">
-  <img src="/assets/images/Making-Sense-of-Agile-Methodologies.svg alt="When to Use Each Methodology" style="max-width: 800px; width: 100%; height: auto;">
+  <img src="/assets/images/Making-Sense-of-Agile-Methodologies.svg" alt="When to Use Each Methodology" style="max-width: 800px; width: 100%; height: auto;">
 </p>
 
 <div class="section" id="implementation">
   
-## Implementation Strategies
+##Implementation Strategies
 
 Successfully implementing either methodology requires careful planning and consideration of organizational context.
 
-### Implementing Scrum
+###Implementing Scrum
 
-1. **Preparation Phase** :
+1.**Preparation Phase**:
    - Train team members in Scrum principles
    - Establish roles and responsibilities
    - Set up necessary tools and infrastructure
@@ -310,12 +310,12 @@ Successfully implementing either methodology requires careful planning and consi
    - Create initial product backlog
    - Establish sprint length and ceremonies
 
-3. **Stabilization Phase** :
+3.**Stabilization Phase**:
    - Regular inspection and adaptation
    - Team velocity stabilization
    - Process refinement
 
-### Implementing Kanban
+###Implementing Kanban
 
 1. **Initial Setup** :
    - Visualize current workflow
