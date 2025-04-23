@@ -10,12 +10,20 @@ permalink: /blog/:title/
 
 # Plugins
 plugins:
-  - jekyll-seo-tag # Adds metadata for better search engine indexing
-  - jekyll-sitemap # Generates a sitemap.xml for search engines
-  - jekyll-feed # Adds RSS feed for subscribers
-  - jekyll-analytics # Enables Google Analytics tracking
-  - jekyll-paginate # Enables pagination for blog posts
-  - jekyll-archives # Creates archive pages by categories or tags
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-analytics
+  - jekyll-paginate
+  - jekyll-archives
+  - jekyll-minifier
+  - jekyll-relative-links
+  - jekyll-avatar
+  - jekyll-tagging
+  - jekyll-autoprefixer
+  - jekyll-compress-images
+  - jekyll-include-cache
+  - jekyll-last-modified-at
 
 # Sass Compression
 sass:
@@ -31,6 +39,7 @@ author:
   instagram: "brilworksAgile"
   bio: "A dedicated team sharing Agile methodologies and software development insights to empower tech enthusiasts and professionals."
   location: "Ahmedabad, India"
+  avatar: "/assets/images/avatar.jpg"
 
 # Social Media Links
 social_links:
@@ -40,7 +49,7 @@ social_links:
   instagram: "https://www.instagram.com/dhaval.info"
 
 # Google Analytics
-google_analytics: G-JZ3F961KTZ 
+google_analytics: G-JZ3F961KTZ
 
 # Default Page Settings
 defaults:
@@ -50,7 +59,14 @@ defaults:
     values:
       layout: "post"
       comments: true
-      share: true # Add social sharing buttons on posts
+      share: true
+      image: "/assets/images/default-og.jpg"
+      image_alt: "Agile Methodology Tech Blog"
+      canonical_url: true
+      last_modified_at: true
+      sitemap: true
+      priority: 0.8
+      changefreq: "weekly"
       
 kramdown:
   input: GFM
@@ -61,7 +77,15 @@ kramdown:
 # Performance Optimization
 timezone: Asia/Kolkata
 encoding: UTF-8
-paginate: 5 # Number of posts per page for better navigation
+paginate: 5
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
 
 # Reading Experience
 future: true
@@ -76,6 +100,9 @@ exclude:
   - LICENSE
   - node_modules
   - vendor
+  - .git
+  - .gitignore
+  - .DS_Store
 
 # Additional Metadata for SEO
 meta_description: "Learn Agile principles, best practices, and technology trends with Agile Methodology Tech Blog. Gain insights to advance your career."
@@ -85,6 +112,25 @@ meta_keywords: "Agile methodology, project management, software development, agi
 sitemap:
   changefreq: "daily"
   priority: "1.0"
+  exclude:
+    - "/feed.xml"
+    - "/404.html"
+    - "/robots.txt"
+    - "/humans.txt"
+    - "/sitemap.xml"
+  include:
+    - "/blog/"
+    - "/categories/"
+    - "/tags/"
+    - "/archives/"
+  lastmod: true
+  priority: true
+  changefreq: true
+  filename: "sitemap.xml"
+  defaults:
+    changefreq: "weekly"
+    priority: 0.8
+    lastmod: true
 
 # Disqus Integration for Comments
 disqus:
@@ -94,8 +140,55 @@ disqus:
 robots:
   disallow: 
     - /drafts/
-allow: "/"
+    - /private/
+    - /admin/
+  allow: "/"
 
-# Advanced Caching (optional)
-jekyll_assets:
-  compress: true
+# Image Optimization
+image_optim:
+  pngout: false
+  svgo: true
+  jpegrecompress: true
+  jpegoptim: true
+  optipng: true
+  gifsicle: true
+
+# Structured Data
+structured_data:
+  organization:
+    name: "Agile Methodology Tech Blog"
+    url: "https://agilemethodology.github.io"
+    logo: "/assets/images/logo.png"
+    sameAs:
+      - "https://github.com/agilemethodology"
+      - "https://www.linkedin.com/in/dhavalmakwana-/"
+      - "https://medium.com/@dhaval.info"
+  breadcrumbs: true
+  article: true
+  blog: true
+
+# Cache Settings
+jekyll-include-cache:
+  cache_dir: ".jekyll-cache"
+  cache_include_dir: "_includes"
+
+# Tagging Configuration
+tag_page_layout: tag_page
+tag_page_dir: tags
+tag_page_title_prefix: "Tag: "
+tag_page_title_suffix: " - Agile Methodology Tech Blog"
+
+# Feed Configuration
+feed:
+  path: feed.xml
+  limit: 20
+  categories:
+    - agile
+    - technology
+    - software-development
+  tags:
+    - agile
+    - scrum
+    - kanban
+    - devops
+    - software-engineering
