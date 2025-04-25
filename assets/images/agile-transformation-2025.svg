@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="675" viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="1200" height="675" fill="#f8fafc"/>
+    
+    <!-- Title -->
+    <text x="600" y="200" font-family="Arial" font-size="48" font-weight="bold" text-anchor="middle" fill="#1e293b">
+        Organizational Agility
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="600" y="260" font-family="Arial" font-size="24" text-anchor="middle" fill="#475569">
+        Navigating the Path to Transformation
+    </text>
+    
+    <!-- Decorative Elements -->
+    <circle cx="300" cy="400" r="100" fill="#3b82f6" opacity="0.1"/>
+    <circle cx="900" cy="400" r="100" fill="#3b82f6" opacity="0.1"/>
+    
+    <!-- Agile Icons -->
+    <path d="M400 400 L500 400 L450 350 Z" fill="#3b82f6"/>
+    <path d="M700 400 L800 400 L750 350 Z" fill="#3b82f6"/>
+    
+    <!-- Connecting Line -->
+    <line x1="450" y1="400" x2="750" y2="400" stroke="#3b82f6" stroke-width="2" stroke-dasharray="5,5"/>
+</svg> 
