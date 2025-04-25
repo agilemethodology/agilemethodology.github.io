@@ -63,7 +63,6 @@ defaults:
       image: "/assets/images/default-og.jpg"
       image_alt: "Agile Methodology Tech Blog"
       canonical_url: true
-      last_modified_at: true
       sitemap: true
       priority: 0.8
       changefreq: "weekly"
@@ -75,9 +74,9 @@ kramdown:
     line_numbers: true
 
 # Performance Optimization
-timezone: Asia/Kolkata
+timezone: UTC
 encoding: UTF-8
-paginate: 5
+paginate: 6
 compress_html:
   clippings: all
   comments: all
@@ -90,7 +89,8 @@ compress_html:
 # Reading Experience
 future: true
 highlighter: rouge
-paginate_path: "/page:num/"
+paginate_path: "/page/:num/"
+paginate_append: true
 
 # Exclude Files
 exclude:
@@ -181,7 +181,8 @@ tag_page_title_suffix: " - Agile Methodology Tech Blog"
 # Feed Configuration
 feed:
   path: feed.xml
-  limit: 20
+  posts_limit: 20
+  excerpt_only: false
   categories:
     - agile
     - technology
@@ -192,3 +193,14 @@ feed:
     - kanban
     - devops
     - software-engineering
+
+# Default front matter
+default:
+  date: true
+  last_modified_at: true
+  categories: []
+  tags: []
+  author: "Agile Team"
+  image: "/assets/images/default-og-image.jpg"
+  image_alt: "Agile Methodology"
+  description: "Learn about Agile methodologies, best practices, and implementation strategies."
