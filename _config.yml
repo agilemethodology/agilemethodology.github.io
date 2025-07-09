@@ -1,0 +1,99 @@
+# Site Settings
+title: "Agile Methodology Tech Blog"
+description: "Explore the best insights on Agile, Technology, and Software Development practices. Learn how to adopt Agile for organizational success."
+url: "https://agilemethodology.github.io"
+baseurl: ""
+
+# Build Settings
+markdown: kramdown
+permalink: /blog/:title/
+
+# Plugins
+plugins:
+  - jekyll-seo-tag # Adds metadata for better search engine indexing
+  - jekyll-sitemap # Generates a sitemap.xml for search engines
+  - jekyll-feed # Adds RSS feed for subscribers
+  - jekyll-analytics # Enables Google Analytics tracking
+  - jekyll-paginate # Enables pagination for blog posts
+  - jekyll-archives # Creates archive pages by categories or tags
+  - jekyll-breadcrumbs # Breadcrumbs are an essential UI element that helps users and search engines understand the structure of your website.
+
+# Sass Compression
+sass:
+  style: compressed
+
+# SEO Configuration
+author:
+  name: "Agile Team"
+  email: "dhaval2123mba@gmail.com"
+  twitter: "brilworks_agile"
+  linkedin: "brilworks"
+  facebook: "brilworksAgile"
+  instagram: "brilworksAgile"
+  bio: "A dedicated team sharing Agile methodologies and software development insights to empower tech enthusiasts and professionals."
+  location: "Gujarat, India"
+
+# Social Media Links
+social_links:
+  medium: "https://medium.com/@dhaval.info"
+  linkedin: "https://www.linkedin.com/in/dhavalmakwana-/"
+  github: "https://github.com/agilemethodology"
+  instagram: "https://www.instagram.com/dhaval.info"
+
+# Google Analytics
+google_analytics: G-JZ3F961KTZ 
+
+# Default Page Settings
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+      share: true # Add social sharing buttons on posts
+
+# Performance Optimization
+timezone: Asia/Kolkata
+encoding: UTF-8
+paginate: 5 # Number of posts per page for better navigation
+
+# Reading Experience
+future: true
+highlighter: rouge
+paginate_path: "/page:num/"
+
+# Exclude Files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - node_modules
+  - vendor
+
+# Additional Metadata for SEO
+meta_description: "{% if page.description %}{{ page.description }}{% else %}Learn Agile principles, best practices, and technology trends with Agile Methodology Tech Blog.{% endif %}"
+title: "{% if page.title %}{{ page.title }} - Agile Methodology Tech Blog{% else %}Agile Methodology Tech Blog{% endif %}"
+meta_keywords: "Agile methodology, project management, software development, agile transformation, technology insights"
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+# Sitemap Settings
+sitemap:
+  changefreq: "weekly"
+  priority: "1.0"
+
+# Disqus Integration for Comments
+disqus:
+  shortname: agile-tech-blog
+
+# Robots.txt
+robots:
+  disallow: 
+    - /drafts/
+allow: "/"
+
+# Advanced Caching (optional)
+jekyll_assets:
+  compress: true
+

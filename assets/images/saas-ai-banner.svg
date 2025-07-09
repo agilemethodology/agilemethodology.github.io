@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2B3494;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1B1464;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Animation definitions -->
+    <style type="text/css">
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
+      }
+      @keyframes dash {
+        to { stroke-dashoffset: -1000; }
+      }
+      .floating { animation: float 3s ease-in-out infinite; }
+      .pulsing { animation: pulse 2s ease-in-out infinite; }
+      .network-line { animation: dash 20s linear infinite; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative network lines -->
+  <g stroke="#4A69BD" stroke-width="1" opacity="0.3">
+    <path class="network-line" d="M0,100 Q200,150 400,100 T800,150" fill="none" 
+          stroke-dasharray="5,5"/>
+    <path class="network-line" d="M0,200 Q200,250 400,200 T800,250" fill="none" 
+          stroke-dasharray="5,5"/>
+    <path class="network-line" d="M0,300 Q200,350 400,300 T800,350" fill="none" 
+          stroke-dasharray="5,5"/>
+  </g>
+
+  <!-- Main elements -->
+  <g class="floating">
+    <!-- Cloud representing SaaS -->
+    <path d="M300,180 C300,140 340,140 360,160 C380,120 440,120 460,160 C480,140 520,140 520,180 C520,220 480,220 460,200 C440,240 380,240 360,200 C340,220 300,220 300,180" 
+          fill="#6C5CE7" opacity="0.9"/>
+    
+    <!-- AI circuit patterns -->
+    <g fill="none" stroke="#A3CB38" stroke-width="2">
+      <path d="M350,170 L380,170 L380,190 L420,190" class="pulsing"/>
+      <path d="M440,170 L470,170 L470,190" class="pulsing"/>
+      <circle cx="380" cy="170" r="3" fill="#A3CB38"/>
+      <circle cx="470" cy="170" r="3" fill="#A3CB38"/>
+    </g>
+  </g>
+
+  <!-- 2025 text -->
+  <text x="400" y="300" font-family="Arial, sans-serif" font-size="48" 
+        fill="#FFFFFF" text-anchor="middle" font-weight="bold">2025</text>
+  
+  <!-- Tagline -->
+  <text x="400" y="340" font-family="Arial, sans-serif" font-size="20" 
+        fill="#FFFFFF" text-anchor="middle" opacity="0.8">
+    Navigating the SaaS-AI Landscape
+  </text>
+</svg>
