@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+Allow: /blog/
+Allow: /tags/
+Allow: /categories/
+Allow: /assets/
+Allow: /feed.xml
+Allow: /sitemap.xml
+
+Disallow: /drafts/
+Disallow: /private/
+Disallow: /admin/
+Disallow: /search/
+Disallow: /?*
+Disallow: /*?*
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.js$
+Disallow: /*.css$
+
+Sitemap: https://agilemethodology.github.io/sitemap.xml 

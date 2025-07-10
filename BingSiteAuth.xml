@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <users>
 	<user>565561BCA2018AEF0449C8B0C805D9DA</user>
+=======
+<?xml version="1.0"?>
+<users>
+	<user>565561BCA2018AEF0449C8B0C805D9DA</user>
+>>>>>>> 2285e715f99f63230fdef3bfc51cd25e88439d1b
 </users>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
   <rect width="400" height="300" fill="#f0f0f0"/>
   <text x="200" y="50" text-anchor="middle" font-size="20" font-weight="bold">Scrum Master Roles</text>
@@ -8,3 +9,15 @@
   <text x="200" y="180" text-anchor="middle" font-size="14">Coach</text>
   <text x="200" y="240" text-anchor="middle" font-size="14">Servant Leader</text>
 </svg>
+=======
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#f0f0f0"/>
+  <text x="200" y="50" text-anchor="middle" font-size="20" font-weight="bold">Scrum Master Roles</text>
+  
+  <circle cx="200" cy="150" r="100" fill="#e0e0e0" stroke="#333"/>
+  
+  <text x="200" y="120" text-anchor="middle" font-size="14">Facilitator</text>
+  <text x="200" y="180" text-anchor="middle" font-size="14">Coach</text>
+  <text x="200" y="240" text-anchor="middle" font-size="14">Servant Leader</text>
+</svg>
+>>>>>>> 2285e715f99f63230fdef3bfc51cd25e88439d1b

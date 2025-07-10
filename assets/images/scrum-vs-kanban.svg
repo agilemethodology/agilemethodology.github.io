@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
   <defs>
     <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -13,3 +14,20 @@
     Which Method is Right for You?
   </text>
 </svg>
+=======
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3494E6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EC6EAD;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="100" fill="url(#gradient1)" />
+  <text x="200" y="50" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" alignment-baseline="middle" fill="white">
+    Scrum vs. Kanban:
+  </text>
+  <text x="200" y="75" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" alignment-baseline="middle" fill="white">
+    Which Method is Right for You?
+  </text>
+</svg>
+>>>>>>> 2285e715f99f63230fdef3bfc51cd25e88439d1b

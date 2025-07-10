@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
   <rect width="400" height="300" fill="#f0f0f0"/>
   <text x="200" y="50" text-anchor="middle" font-size="20" font-weight="bold">Agile Transformation</text>
@@ -7,3 +8,14 @@
   <text x="200" y="180" text-anchor="middle" font-size="14">Strategic Change</text>
   <text x="200" y="210" text-anchor="middle" font-size="12">Cultural • Process • Technology</text>
 </svg>
+=======
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#f0f0f0"/>
+  <text x="200" y="50" text-anchor="middle" font-size="20" font-weight="bold">Agile Transformation</text>
+  
+  <polygon points="200,100 350,200 50,200" fill="#4CAF50" opacity="0.7"/>
+  
+  <text x="200" y="180" text-anchor="middle" font-size="14">Strategic Change</text>
+  <text x="200" y="210" text-anchor="middle" font-size="12">Cultural • Process • Technology</text>
+</svg>
+>>>>>>> 2285e715f99f63230fdef3bfc51cd25e88439d1b

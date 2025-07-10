@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" style="background-color: #f0f4f8;">
   <!-- Background gradient -->
   <defs>
@@ -46,3 +47,53 @@
     <line x1="200" y1="0" x2="200" y2="250" />
   </g>
 </svg>
+=======
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" style="background-color: #f0f4f8;">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e6f2ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0f8ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="250" fill="url(#bg-gradient)"/>
+  
+  <!-- Interconnected Gears Symbolizing Agile Methodology -->
+  <g transform="translate(200, 125) scale(0.7)">
+    <!-- Large Gear -->
+    <circle cx="0" cy="0" r="80" fill="#4a90e2" opacity="0.2"/>
+    <path d="M0,-90 L0,-110 A120,120 0 0,1 40,-105 L50,-125 A140,140 0 0,0 0,-110 Z" fill="#2c3e50" transform="rotate(0)">
+      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="20s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Medium Gear -->
+    <circle cx="0" cy="0" r="50" fill="#3498db" opacity="0.3"/>
+    <path d="M0,-60 L0,-75 A80,80 0 0,1 25,-70 L35,-85 A90,90 0 0,0 0,-75 Z" fill="#34495e" transform="rotate(45)">
+      <animateTransform attributeName="transform" type="rotate" from="45 0 0" to="405 0 0" dur="15s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Small Gear -->
+    <circle cx="0" cy="0" r="25" fill="#5dade2" opacity="0.4"/>
+    <path d="M0,-30 L0,-40 A40,40 0 0,1 12,-37 L18,-45 A45,45 0 0,0 0,-40 Z" fill="#2980b9" transform="rotate(-30)">
+      <animateTransform attributeName="transform" type="rotate" from="-30 0 0" to="330 0 0" dur="10s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Text Elements -->
+  <text x="200" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">
+    Agile Innovation
+  </text>
+  
+  <text x="200" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#34495e">
+    Transforming Industries
+  </text>
+  
+  <!-- Subtle Grid Lines -->
+  <g stroke="#a0b7c7" stroke-opacity="0.2" stroke-dasharray="5,5">
+    <line x1="0" y1="125" x2="400" y2="125" />
+    <line x1="200" y1="0" x2="200" y2="250" />
+  </g>
+</svg>
+>>>>>>> 2285e715f99f63230fdef3bfc51cd25e88439d1b

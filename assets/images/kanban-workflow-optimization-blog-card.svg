@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
   <defs>
     <linearGradient id="kanbanGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -26,3 +27,33 @@
     Agile Insights Blog
   </text>
 </svg>
+=======
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="kanbanGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="630" fill="url(#kanbanGradient)"/>
+  
+  <g transform="translate(800, 315) scale(2)">
+    <rect x="-40" y="-30" width="20" height="60" fill="#FFFFFF" opacity="0.3"/>
+    <rect x="-10" y="-30" width="20" height="60" fill="#FFFFFF" opacity="0.5"/>
+    <rect x="20" y="-30" width="20" height="60" fill="#FFFFFF" opacity="0.7"/>
+  </g>
+  
+  <text x="100" y="200" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="white">
+    Kanban Workflow
+  </text>
+  
+  <text x="100" y="300" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="white">
+    Optimization
+  </text>
+  
+  <text x="100" y="550" font-family="Arial, sans-serif" font-size="36" fill="white" opacity="0.6">
+    Agile Insights Blog
+  </text>
+</svg>
+>>>>>>> 2285e715f99f63230fdef3bfc51cd25e88439d1b

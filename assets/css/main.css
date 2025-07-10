@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
   --primary-color: #2c3e50;
   --secondary-color: #3498db;
@@ -35,3 +36,42 @@ body {
   color: #666;
   font-size: 0.9rem;
 }
+=======
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--primary-color);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    padding: 0.5rem;
+  }
+}
+
+.post-preview {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.post-meta {
+  color: #666;
+  font-size: 0.9rem;
+}
+>>>>>>> 2285e715f99f63230fdef3bfc51cd25e88439d1b

@@ -1,0 +1,177 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient definitions -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#334155;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#475569;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1d4ed8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="secondaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="tertiaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="glowEffect" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.05" />
+    </linearGradient>
+    
+    <!-- Filter for glow -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Filter for shadow -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Abstract geometric background elements -->
+  <circle cx="150" cy="150" r="60" fill="url(#accentGradient)" opacity="0.1"/>
+  <circle cx="1050" cy="480" r="80" fill="url(#secondaryGradient)" opacity="0.1"/>
+  <rect x="900" y="100" width="120" height="120" rx="10" fill="url(#tertiaryGradient)" opacity="0.1" transform="rotate(15 960 160)"/>
+  
+  <!-- Agile Sprint Cycle Visualization -->
+  <g transform="translate(150, 300)">
+    <!-- Sprint cycle arrows -->
+    <path d="M 0 0 Q 50 -50 100 0 Q 50 50 0 0" stroke="url(#accentGradient)" stroke-width="4" fill="none" opacity="0.7"/>
+    
+    <!-- Sprint phases -->
+    <circle cx="0" cy="0" r="12" fill="url(#accentGradient)" filter="url(#shadow)"/>
+    <text x="0" y="-25" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="600">PLAN</text>
+    
+    <circle cx="100" cy="0" r="12" fill="url(#secondaryGradient)" filter="url(#shadow)"/>
+    <text x="100" y="-25" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="600">BUILD</text>
+    
+    <circle cx="50" cy="-43" r="12" fill="url(#tertiaryGradient)" filter="url(#shadow)"/>
+    <text x="50" y="-68" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="600">TEST</text>
+    
+    <circle cx="50" cy="43" r="12" fill="#e11d48" filter="url(#shadow)"/>
+    <text x="50" y="68" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="600">REVIEW</text>
+  </g>
+  
+  <!-- Kanban Board Visualization -->
+  <g transform="translate(800, 250)">
+    <!-- Kanban columns -->
+    <rect x="0" y="0" width="80" height="120" rx="8" fill="url(#glowEffect)" stroke="#3b82f6" stroke-width="2" opacity="0.6"/>
+    <text x="40" y="15" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="600">TO DO</text>
+    
+    <rect x="90" y="0" width="80" height="120" rx="8" fill="url(#glowEffect)" stroke="#10b981" stroke-width="2" opacity="0.6"/>
+    <text x="130" y="15" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="600">IN PROGRESS</text>
+    
+    <rect x="180" y="0" width="80" height="120" rx="8" fill="url(#glowEffect)" stroke="#f59e0b" stroke-width="2" opacity="0.6"/>
+    <text x="220" y="15" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="11" font-weight="600">DONE</text>
+    
+    <!-- Kanban cards -->
+    <rect x="10" y="25" width="60" height="20" rx="4" fill="#3b82f6" opacity="0.8"/>
+    <rect x="10" y="50" width="60" height="20" rx="4" fill="#3b82f6" opacity="0.8"/>
+    
+    <rect x="100" y="25" width="60" height="20" rx="4" fill="#10b981" opacity="0.8"/>
+    
+    <rect x="190" y="25" width="60" height="20" rx="4" fill="#f59e0b" opacity="0.8"/>
+    <rect x="190" y="50" width="60" height="20" rx="4" fill="#f59e0b" opacity="0.8"/>
+    <rect x="190" y="75" width="60" height="20" rx="4" fill="#f59e0b" opacity="0.8"/>
+  </g>
+  
+  <!-- Main title -->
+  <text x="600" y="150" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="56" font-weight="700" filter="url(#glow)">AGILE</text>
+  <text x="600" y="210" text-anchor="middle" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="32" font-weight="400">Software Development</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="260" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="18" font-weight="400">Iterative • Collaborative • Adaptive</text>
+  
+  <!-- Key principles/benefits -->
+  <g transform="translate(600, 380)">
+    <!-- Faster Delivery -->
+    <g transform="translate(-180, 0)">
+      <circle cx="0" cy="0" r="25" fill="url(#accentGradient)" opacity="0.8" filter="url(#shadow)"/>
+      <path d="M -8 -4 L -8 4 L 8 0 Z" fill="#ffffff"/>
+      <text x="0" y="45" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="600">Faster Delivery</text>
+    </g>
+    
+    <!-- Better Quality -->
+    <g transform="translate(-60, 0)">
+      <circle cx="0" cy="0" r="25" fill="url(#secondaryGradient)" opacity="0.8" filter="url(#shadow)"/>
+      <path d="M -8 0 L -3 8 L 8 -6" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <text x="0" y="45" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="600">Better Quality</text>
+    </g>
+    
+    <!-- Team Collaboration -->
+    <g transform="translate(60, 0)">
+      <circle cx="0" cy="0" r="25" fill="url(#tertiaryGradient)" opacity="0.8" filter="url(#shadow)"/>
+      <circle cx="-6" cy="-4" r="4" fill="#ffffff"/>
+      <circle cx="6" cy="-4" r="4" fill="#ffffff"/>
+      <circle cx="0" cy="6" r="4" fill="#ffffff"/>
+      <text x="0" y="45" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="600">Team Collaboration</text>
+    </g>
+    
+    <!-- Customer Focus -->
+    <g transform="translate(180, 0)">
+      <circle cx="0" cy="0" r="25" fill="#e11d48" opacity="0.8" filter="url(#shadow)"/>
+      <path d="M -6 -8 Q 0 -12 6 -8 Q 6 -2 0 4 Q -6 -2 -6 -8" fill="#ffffff"/>
+      <text x="0" y="45" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="600">Customer Focus</text>
+    </g>
+  </g>
+  
+  <!-- Methodology badges -->
+  <g transform="translate(600, 510)">
+    <rect x="-120" y="0" width="80" height="30" rx="15" fill="url(#accentGradient)" opacity="0.9" filter="url(#shadow)"/>
+    <text x="-80" y="20" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="600">Scrum</text>
+    
+    <rect x="-30" y="0" width="80" height="30" rx="15" fill="url(#secondaryGradient)" opacity="0.9" filter="url(#shadow)"/>
+    <text x="10" y="20" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="600">Kanban</text>
+    
+    <rect x="60" y="0" width="80" height="30" rx="15" fill="url(#tertiaryGradient)" opacity="0.9" filter="url(#shadow)"/>
+    <text x="100" y="20" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="600">DevOps</text>
+  </g>
+  
+  <!-- Modern 2025 badge -->
+  <g transform="translate(1050, 100)">
+    <rect x="-40" y="-12" width="80" height="24" rx="12" fill="#6366f1" opacity="0.9" filter="url(#shadow)"/>
+    <text x="0" y="4" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="700">2025 GUIDE</text>
+  </g>
+  
+  <!-- Decorative code-like elements -->
+  <g transform="translate(50, 450)" opacity="0.3">
+    <text fill="#64748b" font-family="monospace" font-size="12">
+      <tspan x="0" y="0">function agileProcess() {</tspan>
+      <tspan x="0" y="20">  return iterate(plan, build, test);</tspan>
+      <tspan x="0" y="40">}</tspan>
+    </text>
+  </g>
+  
+  <!-- Sprint velocity chart visualization -->
+  <g transform="translate(950, 400)" opacity="0.4">
+    <path d="M 0 50 L 20 40 L 40 35 L 60 25 L 80 20" stroke="#3b82f6" stroke-width="2" fill="none"/>
+    <circle cx="0" cy="50" r="2" fill="#3b82f6"/>
+    <circle cx="20" cy="40" r="2" fill="#3b82f6"/>
+    <circle cx="40" cy="35" r="2" fill="#3b82f6"/>
+    <circle cx="60" cy="25" r="2" fill="#3b82f6"/>
+    <circle cx="80" cy="20" r="2" fill="#3b82f6"/>
+    <text x="40" y="70" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="10">Velocity Trend</text>
+  </g>
+  
+  <!-- Bottom accent line -->
+  <rect x="0" y="620" width="1200" height="10" fill="url(#accentGradient)" opacity="0.6"/>
+</svg>

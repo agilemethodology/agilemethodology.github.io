@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 layout: blog
 title: Blog
@@ -11,3 +12,18 @@ title: Blog
         </article>
     {% endfor %}
 </div>
+=======
+---
+layout: blog
+title: Blog
+---
+<div>
+    <h2>Blog Posts</h2>
+    {% for post in site.posts %}
+        <article>
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <p>{{ post.excerpt }}</p>
+        </article>
+    {% endfor %}
+</div>
+>>>>>>> 2285e715f99f63230fdef3bfc51cd25e88439d1b

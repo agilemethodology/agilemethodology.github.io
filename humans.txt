@@ -1,0 +1,21 @@
+/* TEAM */
+Agile Team
+    Site: https://agilemethodology.github.io
+    Location: Ahmedabad, India
+    Twitter: @brilworks_agile
+    LinkedIn: brilworks
+
+/* THANKS */
+Jekyll: https://jekyllrb.com/
+GitHub Pages: https://pages.github.com/
+Font Awesome: https://fontawesome.com/
+Google Analytics: https://analytics.google.com/
+
+/* SITE */
+Last update: 2024
+Language: English
+Doctype: HTML5
+IDE: Cursor
+Standards: HTML5, CSS3
+Components: Jekyll, Ruby, JavaScript
+Softwares: Visual Studio Code, Git 

@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
+=======
+<html lang="en" class="light">
+>>>>>>> 2285e715f99f63230fdef3bfc51cd25e88439d1b
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +11,18 @@
     <meta name="description" content="{{ page.excerpt | strip_html | truncatewords: 30 }}">
 <meta name="keywords" content="{{ page.keywords | default: 'Agile, Scrum, Software Development, Product Management' }}">
 <link rel="canonical" href="{{ page.url | absolute_url }}">
+<<<<<<< HEAD
 <img src="{{ page.image }}" alt="{{ page.title }}" class="w-full h-96 object-cover rounded-lg mb-8" loading="lazy">
 
 
     <!-- Critical CSS -->
+=======
+    <meta name="author" content="Dhaval Makwana">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Theme Styles -->
+>>>>>>> 2285e715f99f63230fdef3bfc51cd25e88439d1b
     <style>
         :root {
             --primary-color: #3498db;
@@ -19,12 +31,23 @@
             --text-light: #ecf0f1;
             --bg-light: #f4f6f7;
             --bg-dark: #1a1a2e;
+<<<<<<< HEAD
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+=======
+            --transition-speed: 0.3s;
+        }
+        
+        .dark {
+            --text-dark: #ecf0f1;
+            --text-light: #2c3e50;
+            --bg-light: #1a1a2e;
+            --bg-dark: #f4f6f7;
+>>>>>>> 2285e715f99f63230fdef3bfc51cd25e88439d1b
         }
         
         body {
@@ -32,6 +55,10 @@
             line-height: 1.6;
             color: var(--text-dark);
             background-color: var(--bg-light);
+<<<<<<< HEAD
+=======
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+>>>>>>> 2285e715f99f63230fdef3bfc51cd25e88439d1b
         }
 
         @keyframes fadeIn {
@@ -51,16 +78,385 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
+<<<<<<< HEAD
+=======
+
+        .theme-toggle-button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dark .theme-toggle-button {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .theme-toggle-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .theme-toggle-button .icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-right: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle-button .sun-icon {
+            opacity: 1;
+        }
+
+        .theme-toggle-button .moon-icon {
+            opacity: 0;
+            position: absolute;
+            left: 0.75rem;
+        }
+
+        .dark .theme-toggle-button .sun-icon {
+            opacity: 0;
+        }
+
+        .dark .theme-toggle-button .moon-icon {
+            opacity: 1;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .theme-toggle-button:hover .icon {
+            animation: rotate 2s linear infinite;
+        }
+
+        /* Mobile Table of Contents */
+        @media (max-width: 1023px) {
+            .toc-container {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 1000;
+                display: none;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            .toc-container.active {
+                display: block;
+                opacity: 1;
+            }
+
+            .toc {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: var(--bg-light);
+                padding: 1rem;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                overflow-y: auto;
+            }
+
+            .dark .toc {
+                background-color: var(--bg-dark);
+            }
+
+            .toc-container.active .toc {
+                transform: translateX(0);
+            }
+
+            .toc-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1rem;
+                padding-bottom: 0.5rem;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .dark .toc-header {
+                border-bottom-color: rgba(255, 255, 255, 0.1);
+            }
+
+            .toc-close {
+                background: none;
+                border: none;
+                color: var(--text-dark);
+                cursor: pointer;
+                padding: 0.5rem;
+            }
+
+            .dark .toc-close {
+                color: var(--text-light);
+            }
+
+            .toc-toggle {
+                display: block;
+                position: fixed;
+                bottom: 1rem;
+                right: 1rem;
+                background-color: var(--primary-color);
+                color: white;
+                padding: 0.75rem 1.5rem;
+                border-radius: 0.5rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                z-index: 999;
+            }
+
+            .dark .toc-toggle {
+                background-color: var(--secondary-color);
+            }
+        }
+
+        /* Desktop Table of Contents */
+        @media (min-width: 1024px) {
+            .toc-container {
+                display: none; /* Hide the mobile container on desktop */
+            }
+
+            .toc-toggle {
+                display: none;
+            }
+        }
+
+        /* Image Container Styles */
+        .image-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            background-color: #f3f4f6;
+        }
+
+        .dark .image-container {
+            background-color: #374151;
+        }
+
+        .image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Image Sizes */
+        @media (max-width: 768px) {
+            .image-container {
+                padding-bottom: 75%; /* 4:3 Aspect Ratio for mobile */
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .image-container {
+                padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .image-container {
+                padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            }
+        }
+
+        /* Responsive Image Grid */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .image-grid-item {
+            position: relative;
+            padding-bottom: 56.25%;
+            overflow: hidden;
+            border-radius: 0.5rem;
+        }
+
+        .image-grid-item img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Fallback Image Styles */
+        .fallback-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f3f4f6;
+            color: #6b7280;
+            font-size: 0.875rem;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .dark .fallback-image {
+            background-color: #374151;
+            color: #9ca3af;
+        }
+
+        /* Lazy Loading Animation */
+        .lazy-load {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .lazy-load.loaded {
+            opacity: 1;
+        }
+
+        /* Image Placeholder */
+        .image-placeholder {
+            position: relative;
+            background: linear-gradient(110deg, #f3f4f6 8%, #f9fafb 18%, #f3f4f6 33%);
+            background-size: 200% 100%;
+            animation: 1.5s shine linear infinite;
+        }
+
+        .dark .image-placeholder {
+            background: linear-gradient(110deg, #374151 8%, #4b5563 18%, #374151 33%);
+        }
+
+        @keyframes shine {
+            to {
+                background-position-x: -200%;
+            }
+        }
+
+        /* Image Card Styles */
+        .image-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark .image-card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Image Container Styles */
+        .image-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            background-color: #f3f4f6;
+        }
+
+        .dark .image-container {
+            background-color: #374151;
+        }
+
+        .image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Image Grid */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .image-grid-item {
+            position: relative;
+            padding-bottom: 56.25%;
+            overflow: hidden;
+            border-radius: 0.5rem;
+        }
+
+        .image-grid-item img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Image Placeholder */
+        .image-placeholder {
+            position: relative;
+            background: linear-gradient(110deg, #f3f4f6 8%, #f9fafb 18%, #f3f4f6 33%);
+            background-size: 200% 100%;
+            animation: 1.5s shine linear infinite;
+        }
+
+        .dark .image-placeholder {
+            background: linear-gradient(110deg, #374151 8%, #4b5563 18%, #374151 33%);
+        }
+
+        @keyframes shine {
+            to {
+                background-position-x: -200%;
+            }
+        }
+>>>>>>> 2285e715f99f63230fdef3bfc51cd25e88439d1b
     </style>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+<<<<<<< HEAD
+=======
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--primary-color)',
+                        secondary: 'var(--secondary-color)',
+                    }
+                }
+            }
+        }
+    </script>
+>>>>>>> 2285e715f99f63230fdef3bfc51cd25e88439d1b
 
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="antialiased">
  <!-- Enhanced Navigation -->
+<<<<<<< HEAD
 <header class="sticky top-0 z-50 bg-white shadow-md backdrop-filter backdrop-blur-lg bg-opacity-90">
     <nav class="container mx-auto px-4 py-4">
         <div class="flex justify-between items-center">
@@ -81,10 +477,79 @@
             <!-- Mobile Toggle Button -->
             <div class="md:hidden flex items-center space-x-4">
                 <button id="sidebar-toggle" class="text-gray-800 hover:text-blue-600 transition">
+=======
+    <header class="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md backdrop-filter backdrop-blur-lg bg-opacity-90 dark:bg-opacity-90 transition-colors duration-300">
+    <nav class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+                <!-- Logo and Site Name -->
+                <a href="/" class="flex items-center space-x-3 group">
+                    <img src="/assets/images/logo.svg" alt="Agile Insights Logo" class="h-10 w-10 transition-transform duration-300 group-hover:rotate-12">
+                    <span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-400 dark:to-blue-600 bg-clip-text text-transparent">Agile Insights</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="nav-link relative group" data-active="home">
+                        <span>Home</span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="/blog" class="nav-link relative group" data-active="blog">
+                        <span>Blog</span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="/about" class="nav-link relative group" data-active="about">
+                        <span>About</span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="/contact" class="nav-link relative group" data-active="contact">
+                        <span>Contact</span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    
+                    <!-- Search Box -->
+                    <div class="relative">
+                        <input type="text" id="search-input" placeholder="Search articles..." 
+                            class="w-48 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 
+                                   bg-white dark:bg-gray-800 text-gray-900 dark:text-white 
+                                   focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400
+                                   transition-all duration-300">
+                        <div id="search-results" class="absolute top-full left-0 w-full mt-2 bg-white dark:bg-gray-800 
+                                          rounded-lg shadow-lg hidden z-50 max-h-96 overflow-y-auto">
+                            <!-- Search results will be populated here -->
+                        </div>
+            </div>
+
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle" class="theme-toggle-button" aria-label="Toggle theme">
+                        <svg class="icon sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                        <svg class="icon moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                        <span class="text-sm font-medium">Theme</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center space-x-4">
+                    <!-- Theme Toggle Button for Mobile -->
+                    <button id="theme-toggle-mobile" class="theme-toggle-button" aria-label="Toggle theme">
+                        <svg class="icon sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                        <svg class="icon moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                    </button>
+
+                    <button id="mobile-menu-button" class="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+>>>>>>> 2285e715f99f63230fdef3bfc51cd25e88439d1b
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
+<<<<<<< HEAD
                 <button id="theme-toggle" class="text-gray-800 hover:text-blue-600 transition">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
@@ -206,6 +671,406 @@
                 {% endfor %}
             </div>
         </section>
+=======
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-900 shadow-lg">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="/" class="nav-link-mobile" data-active="home">Home</a>
+                    <a href="/blog" class="nav-link-mobile" data-active="blog">Blog</a>
+                    <a href="/about" class="nav-link-mobile" data-active="about">About</a>
+                    <a href="/contact" class="nav-link-mobile" data-active="contact">Contact</a>
+                    
+                    <!-- Search Box for Mobile -->
+                    <div class="relative">
+                        <input type="text" id="search-input-mobile" placeholder="Search articles..." 
+                            class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 
+                                   bg-white dark:bg-gray-800 text-gray-900 dark:text-white 
+                                   focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400
+                                   transition-all duration-300">
+                        <div id="search-results-mobile" class="absolute top-full left-0 w-full mt-2 bg-white dark:bg-gray-800 
+                                          rounded-lg shadow-lg hidden z-50 max-h-96 overflow-y-auto">
+                            <!-- Search results will be populated here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</header>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+        const html = document.documentElement;
+        
+        function toggleTheme() {
+            html.classList.toggle('dark');
+            const isDark = html.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            
+            // Update all theme-dependent elements
+            document.querySelectorAll('.theme-toggle-button').forEach(button => {
+                button.classList.toggle('dark', isDark);
+            });
+        }
+        
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            html.classList.toggle('dark', savedTheme === 'dark');
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            html.classList.add('dark');
+        }
+        
+        // Toggle theme on button click
+        themeToggle.addEventListener('click', toggleTheme);
+        themeToggleMobile.addEventListener('click', toggleTheme);
+
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (!localStorage.getItem('theme')) {
+                html.classList.toggle('dark', e.matches);
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Active Navigation Link
+        function setActiveLink() {
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('.nav-link, .nav-link-mobile');
+            
+            navLinks.forEach(link => {
+                const linkPath = link.getAttribute('href');
+                if (currentPath === linkPath || (linkPath !== '/' && currentPath.startsWith(linkPath))) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+
+        // Set active link on page load
+        document.addEventListener('DOMContentLoaded', setActiveLink);
+
+        // Search Functionality
+        const searchInput = document.getElementById('search-input');
+        const searchInputMobile = document.getElementById('search-input-mobile');
+        const searchResults = document.getElementById('search-results');
+        const searchResultsMobile = document.getElementById('search-results-mobile');
+
+        let searchData = null;
+
+        // Fetch search data
+        async function fetchSearchData() {
+            try {
+                const response = await fetch('/search.json');
+                searchData = await response.json();
+            } catch (error) {
+                console.error('Error fetching search data:', error);
+            }
+        }
+
+        // Perform search
+        function performSearch(query) {
+            if (!searchData) return;
+
+            const results = Object.entries(searchData)
+                .filter(([url, data]) => {
+                    const searchString = (data.title + ' ' + data.excerpt + ' ' + data.content).toLowerCase();
+                    return searchString.includes(query.toLowerCase());
+                })
+                .map(([url, data]) => ({
+                    url,
+                    title: data.title,
+                    excerpt: data.excerpt,
+                    date: data.date
+                }));
+
+            const resultsHTML = results.map(result => `
+                <a href="${result.url}" class="block p-4 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                    <h3 class="font-semibold text-gray-900 dark:text-white">${result.title}</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">${result.excerpt}</p>
+                    <p class="text-xs text-gray-500 dark:text-gray-500 mt-1">${result.date}</p>
+                </a>
+            `).join('');
+
+            searchResults.innerHTML = resultsHTML;
+            searchResultsMobile.innerHTML = resultsHTML;
+            
+            if (results.length > 0) {
+                searchResults.classList.remove('hidden');
+                searchResultsMobile.classList.remove('hidden');
+            } else {
+                searchResults.classList.add('hidden');
+                searchResultsMobile.classList.add('hidden');
+            }
+        }
+
+        // Debounce search input
+        let searchTimeout;
+        function handleSearch(input, results) {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                const query = input.value.trim();
+                if (query.length > 2) {
+                    performSearch(query);
+                } else {
+                    results.classList.add('hidden');
+                }
+            }, 300);
+        }
+
+        // Initialize search
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchSearchData();
+            
+            // Add event listeners for search
+            searchInput.addEventListener('input', () => handleSearch(searchInput, searchResults));
+            searchInputMobile.addEventListener('input', () => handleSearch(searchInputMobile, searchResultsMobile));
+
+            // Close search results when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+                    searchResults.classList.add('hidden');
+                }
+                if (!searchInputMobile.contains(e.target) && !searchResultsMobile.contains(e.target)) {
+                    searchResultsMobile.classList.add('hidden');
+                }
+            });
+    });
+</script>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Left Sidebar - Table of Contents -->
+            <aside class="lg:w-1/4 lg:sticky lg:top-8 lg:self-start">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+                    <h2 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">Table of Contents</h2>
+                    <div id="toc" class="toc">
+                        <!-- Table of contents will be generated here -->
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <article class="lg:w-2/4">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+                    <header class="mb-12">
+                        <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-lg shadow-lg">
+                            <h1 class="text-4xl md:text-5xl font-bold mb-4">{{ page.title }}</h1>
+                            <div class="flex flex-wrap items-center gap-4 text-sm text-blue-100">
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                                    </svg>
+                                    <span>By {{ page.author | default: site.author.name }}</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                    </svg>
+                                    <span>{{ page.date | date: "%B %d, %Y" }}</span>
+                                </div>
+                                {% if page.last_modified_at %}
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span>Updated {{ page.last_modified_at | date: "%B %d, %Y" }}</span>
+            </div>
+            {% endif %}
+                                {% if page.reading_time %}
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span>{{ page.reading_time }} min read</span>
+            </div>
+                                {% endif %}
+            </div>
+                        </header>
+
+                        <!-- Blog Image Card -->
+                        <div class="mb-12">
+                            <div class="image-card bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                                <div class="image-container">
+                                    {% if page.image %}
+                                        <img 
+                                            src="{{ page.image | relative_url }}" 
+                                            alt="{{ page.title }}" 
+                                            class="w-full h-auto object-cover" 
+                                            loading="lazy"
+                                            width="1200"
+                                            height="675"
+                                            onerror="this.onerror=null; this.src='{{ '/assets/images/default-blog.jpg' | relative_url }}'"
+                                        >
+                            {% else %}
+                                        <img 
+                                            src="{{ '/assets/images/default-blog.jpg' | relative_url }}" 
+                                            alt="{{ page.title }}" 
+                                            class="w-full h-auto object-cover" 
+                                            loading="lazy"
+                                            width="1200"
+                                            height="675"
+                                        >
+                                    {% endif %}
+                                </div>
+                                {% if page.image_caption %}
+                                <div class="p-4 border-t border-gray-200 dark:border-gray-700">
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">{{ page.image_caption }}</p>
+                                </div>
+                            {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="prose dark:prose-invert max-w-none">
+                            {{ content }}
+                        </div>
+
+                        <!-- Tags -->
+                        {% if page.tags %}
+                        <div class="mt-12 pt-8 border-t">
+                            <h3 class="text-xl font-semibold mb-4">Tags</h3>
+                            <div class="flex flex-wrap gap-2">
+                                {% for tag in page.tags %}
+                                <a href="{{ site.url }}/tags/{{ tag | slugify }}" class="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 hover:bg-blue-200 transition-colors">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                                    </svg>
+                                    {{ tag }}
+                                </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        <!-- Comments -->
+                        {% if page.comments %}
+                        <div id="disqus_thread" class="mt-12 pt-8 border-t"></div>
+                        <script>
+                            var disqus_config = function () {
+                                this.page.url = '{{ site.url }}{{ page.url }}';
+                                this.page.identifier = '{{ page.id }}';
+                            };
+                            (function() {
+                                var d = document, s = d.createElement('script');
+                                s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                        </script>
+                        {% endif %}
+                            </div>
+                        </article>
+
+                <!-- Right Sidebar - Sharing Options -->
+                <aside class="lg:w-1/4 lg:sticky lg:top-8 lg:self-start">
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-semibold mb-4">Share this article</h3>
+                        <div class="flex flex-col gap-4">
+                            <a 
+                                href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url }}{{ page.url | url_encode }}" 
+                                class="inline-flex items-center px-4 py-2 rounded-lg bg-[#1DA1F2] text-white hover:bg-[#1a8cd8] transition-colors"
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                aria-label="Share on X (Twitter)"
+                            >
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                </svg>
+                                Share on X
+                            </a>
+                            <a 
+                                href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url | url_encode }}&title={{ page.title | url_encode }}" 
+                                class="inline-flex items-center px-4 py-2 rounded-lg bg-[#0077B5] text-white hover:bg-[#006699] transition-colors"
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                aria-label="Share on LinkedIn"
+                            >
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                                Share on LinkedIn
+                            </a>
+                            <button 
+                                onclick="copyToClipboard('{{ site.url }}{{ page.url }}')"
+                                class="inline-flex items-center px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition-colors"
+                                aria-label="Copy link"
+                            >
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path>
+                                </svg>
+                                Copy Link
+                            </button>
+                        </div>
+
+                        <!-- Related Posts -->
+                        {% if site.related_posts.size > 0 %}
+                        <div class="mt-8 pt-8 border-t">
+                            <h3 class="text-xl font-semibold mb-4">Related Posts</h3>
+                            <div class="space-y-4">
+                                {% for post in site.related_posts limit:3 %}
+                                <article class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 hover:shadow-md transition-shadow">
+                                    <div class="image-card bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                                        <div class="image-container">
+                                            {% if post.image %}
+                                                <img 
+                                                    src="{{ post.image | relative_url }}" 
+                                                    alt="{{ post.title }}" 
+                                                    class="w-full h-auto object-cover" 
+                                                    loading="lazy"
+                                                    width="400"
+                                                    height="225"
+                                                    onerror="this.onerror=null; this.src='{{ '/assets/images/default-blog.jpg' | relative_url }}'"
+                                                >
+                                            {% else %}
+                                                <img 
+                                                    src="{{ '/assets/images/default-blog.jpg' | relative_url }}" 
+                                                    alt="{{ post.title }}" 
+                                                    class="w-full h-auto object-cover" 
+                                                    loading="lazy"
+                                                    width="400"
+                                                    height="225"
+                                                >
+                    {% endif %}
+                                        </div>
+                                    </div>
+                                    <h4 class="text-lg font-semibold">
+                                        <a href="{{ post.url }}" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">{{ post.title }}</a>
+                                    </h4>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                                        {{ post.date | date: "%B %d, %Y" }}
+                                    </p>
+                                </article>
+                {% endfor %}
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                </aside>
+            </div>
+>>>>>>> 2285e715f99f63230fdef3bfc51cd25e88439d1b
     </main>
 
     <!-- Footer -->
@@ -241,5 +1106,379 @@
             </p>
         </div>
     </footer>
+<<<<<<< HEAD
+=======
+
+        <!-- Additional Styles -->
+        <style>
+            .prose {
+                max-width: 65ch;
+            }
+            
+            .prose h1 {
+                font-size: 2.5em;
+                margin-top: 1.5em;
+                margin-bottom: 0.5em;
+            }
+            
+            .prose h2 {
+                font-size: 2em;
+                margin-top: 1.5em;
+                margin-bottom: 0.5em;
+                border-bottom: 2px solid #e5e7eb;
+                padding-bottom: 0.5em;
+            }
+            
+            .prose h3 {
+                font-size: 1.5em;
+                margin-top: 1.5em;
+                margin-bottom: 0.5em;
+            }
+            
+            .prose p {
+                margin-bottom: 1.5em;
+                line-height: 1.8;
+            }
+            
+            .prose img {
+                border-radius: 0.5rem;
+                margin: 2em 0;
+            }
+            
+            .prose blockquote {
+                border-left: 4px solid #3b82f6;
+                padding-left: 1em;
+                margin: 1.5em 0;
+                font-style: italic;
+            }
+            
+            .prose code {
+                background-color: #f3f4f6;
+                padding: 0.2em 0.4em;
+                border-radius: 0.25em;
+                font-size: 0.875em;
+            }
+            
+            .prose pre {
+                background-color: #1f2937;
+                color: #f3f4f6;
+                padding: 1em;
+                border-radius: 0.5em;
+                overflow-x: auto;
+            }
+            
+            .prose table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 1.5em 0;
+            }
+            
+            .prose th, .prose td {
+                border: 1px solid #e5e7eb;
+                padding: 0.75em;
+                text-align: left;
+            }
+            
+            .prose th {
+                background-color: #f3f4f6;
+                font-weight: 600;
+            }
+            
+            .dark .prose th {
+                background-color: #374151;
+            }
+            
+            .dark .prose code {
+                background-color: #374151;
+            }
+
+            /* Sticky sidebar styles */
+            @media (min-width: 1024px) {
+                .lg\:sticky {
+                    position: sticky;
+                    top: 2rem;
+                }
+            }
+
+            /* Table of Contents styles */
+            .toc {
+                max-height: calc(100vh - 200px);
+                overflow-y: auto;
+                scrollbar-width: thin;
+                scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+            }
+
+            .toc::-webkit-scrollbar {
+                width: 6px;
+            }
+
+            .toc::-webkit-scrollbar-track {
+                background: transparent;
+            }
+
+            .toc::-webkit-scrollbar-thumb {
+                background-color: rgba(0, 0, 0, 0.2);
+                border-radius: 3px;
+            }
+
+            .dark .toc::-webkit-scrollbar-thumb {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+
+            .toc ul {
+                list-style: none;
+                padding-left: 0;
+                margin: 0;
+            }
+
+            .toc li {
+                margin-bottom: 0.5rem;
+                position: relative;
+            }
+
+            .toc a {
+                display: block;
+                padding: 0.5rem 1rem;
+                color: #374151; /* Dark gray for light mode */
+                text-decoration: none;
+                border-radius: 0.375rem;
+                transition: all 0.2s ease;
+            }
+
+            .dark .toc a {
+                color: #E5E7EB; /* Light gray for dark mode */
+            }
+
+            .toc a:hover {
+                background-color: rgba(59, 130, 246, 0.1);
+                color: #3b82f6;
+            }
+
+            .dark .toc a:hover {
+                background-color: rgba(59, 130, 246, 0.2);
+                color: #60A5FA;
+            }
+
+            .toc .h1 {
+                font-weight: 600;
+                font-size: 1.1rem;
+                padding-left: 1rem;
+                color: #374151; /* Dark gray for light mode */
+            }
+
+            .dark .toc .h1 {
+                color: #E5E7EB; /* Light gray for dark mode */
+            }
+
+            .toc .h2 {
+                font-weight: 500;
+                font-size: 1rem;
+                padding-left: 2rem;
+                color: #4B5563; /* Slightly lighter gray for light mode */
+                opacity: 0.9;
+            }
+
+            .dark .toc .h2 {
+                color: #D1D5DB; /* Slightly darker gray for dark mode */
+            }
+
+            .toc .active {
+                background-color: rgba(59, 130, 246, 0.1);
+                color: #3b82f6;
+                font-weight: 600;
+            }
+
+            .dark .toc .active {
+                background-color: rgba(59, 130, 246, 0.2);
+                color: #60A5FA;
+            }
+
+            .aspect-video {
+                aspect-ratio: 16/9;
+            }
+
+            .lazy-load {
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+
+            .lazy-load.loaded {
+                opacity: 1;
+            }
+
+            /* Lazy loading for images */
+            document.addEventListener('DOMContentLoaded', function() {
+                const lazyImages = document.querySelectorAll('.lazy-load');
+                
+                if ('IntersectionObserver' in window) {
+                    const imageObserver = new IntersectionObserver((entries, observer) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                const img = entry.target;
+                                img.src = img.dataset.src || img.src;
+                                img.classList.add('loaded');
+                                observer.unobserve(img);
+                            }
+                        });
+                    });
+
+                    lazyImages.forEach(img => {
+                        if (!img.src) {
+                            img.dataset.src = img.getAttribute('data-src');
+                            img.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3C/svg%3E';
+                        }
+                        imageObserver.observe(img);
+                    });
+                } else {
+                    // Fallback for browsers that don't support IntersectionObserver
+                    lazyImages.forEach(img => {
+                        img.classList.add('loaded');
+                    });
+                }
+
+                // Handle image errors
+                document.querySelectorAll('img').forEach(img => {
+                    img.addEventListener('error', function() {
+                        this.src = '/assets/images/default-blog.jpg';
+                        this.classList.add('loaded');
+                    });
+                });
+            });
+
+            /* Search Box Styles */
+            #search-input, #search-input-mobile {
+                transition: all 0.3s ease;
+            }
+
+            #search-input:focus, #search-input-mobile:focus {
+                width: 300px;
+            }
+
+            #search-results, #search-results-mobile {
+                scrollbar-width: thin;
+                scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+            }
+
+            #search-results::-webkit-scrollbar,
+            #search-results-mobile::-webkit-scrollbar {
+                width: 6px;
+            }
+
+            #search-results::-webkit-scrollbar-track,
+            #search-results-mobile::-webkit-scrollbar-track {
+                background: transparent;
+            }
+
+            #search-results::-webkit-scrollbar-thumb,
+            #search-results-mobile::-webkit-scrollbar-thumb {
+                background-color: rgba(0, 0, 0, 0.2);
+                border-radius: 3px;
+            }
+
+            .dark #search-results::-webkit-scrollbar-thumb,
+            .dark #search-results-mobile::-webkit-scrollbar-thumb {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+        </style>
+
+        <!-- Table of Contents Script -->
+        <script>
+            function generateTOC() {
+                const content = document.querySelector('.prose');
+                const headings = content.querySelectorAll('h1, h2');
+                const toc = document.getElementById('toc');
+                let tocHTML = '<ul class="space-y-2">';
+                let currentH1 = null;
+                
+                headings.forEach((heading, index) => {
+                    const id = `heading-${index}`;
+                    heading.id = id;
+                    
+                    const level = heading.tagName.toLowerCase();
+                    const text = heading.textContent;
+                    
+                    if (level === 'h1') {
+                        if (currentH1) {
+                            tocHTML += '</ul></li>';
+                        }
+                        currentH1 = id;
+                        tocHTML += `
+                            <li class="h1">
+                                <a href="#${id}" class="toc-link" data-target="${id}">
+                                    ${text}
+                                </a>
+                                <ul class="ml-4">
+                        `;
+                    } else if (level === 'h2') {
+                        tocHTML += `
+                            <li class="h2">
+                                <a href="#${id}" class="toc-link" data-target="${id}">
+                                    ${text}
+                                </a>
+                            </li>
+                        `;
+                    }
+                });
+                
+                if (currentH1) {
+                    tocHTML += '</ul></li>';
+                }
+                
+                tocHTML += '</ul>';
+                toc.innerHTML = tocHTML;
+
+                // Add click handlers for smooth scrolling
+                document.querySelectorAll('.toc-link').forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const targetId = link.getAttribute('data-target');
+                        const targetElement = document.getElementById(targetId);
+                        
+                        if (targetElement) {
+                            // Remove active class from all links
+                            document.querySelectorAll('.toc-link').forEach(l => l.classList.remove('active'));
+                            // Add active class to clicked link
+                            link.classList.add('active');
+                            
+                            // Smooth scroll to target
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+
+                // Highlight active section while scrolling
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        const id = entry.target.getAttribute('id');
+                        const tocLink = document.querySelector(`.toc-link[data-target="${id}"]`);
+                        
+                        if (entry.isIntersecting) {
+                            document.querySelectorAll('.toc-link').forEach(l => l.classList.remove('active'));
+                            if (tocLink) tocLink.classList.add('active');
+                        }
+                    });
+                }, {
+                    rootMargin: '-20% 0px -80% 0px'
+                });
+
+                headings.forEach(heading => observer.observe(heading));
+            }
+
+            // Copy to Clipboard Function
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    alert('Link copied to clipboard!');
+                }).catch(err => {
+                    console.error('Failed to copy text: ', err);
+                });
+            }
+
+            // Generate TOC when page loads
+            document.addEventListener('DOMContentLoaded', generateTOC);
+        </script>
+>>>>>>> 2285e715f99f63230fdef3bfc51cd25e88439d1b
 </body>
 </html>
